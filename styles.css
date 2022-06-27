@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: space-around;
+}
+
+.calculator-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid black;
+    min-height: 500px;
+    min-width: 300px;
+    width: 600px;
+    height: 850px;
+}
+
+.screen-wrapper {
+    min-height: 100px;
+    border: 2px solid black;
+    flex: 1 1 0;
+    width: 90%;
+    margin: 5% 5% 5% 5%;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 3 1 0;
+    width: 90%;
+    margin: 5% 5% 5% 5%;
+}
+
+.button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    gap: 4%;
+}
+
+.button {
+    height: 75%;
+    font-size: 36px;
+    flex: 1 1 0;
+}
+
+.button.clear {
+    flex: 2 1 0;
+}
+
+.button.divide {
+    flex: 1 1 0;
+}
