@@ -1,18 +1,12 @@
 const currentValueElement = document.querySelector(".current-value");
 const previousValueElement = document.querySelector(".previous-value");
-const mathFunctions = {
-    "+": addFunction,
-    "-": subtractFunction,
-    "*": multiplyFunction,
-    "/": divideFunction,
-};
 
 function addFunction(num1, num2) {
     if(num1 === "") {
         num1 = 0;
     };
     if(num2 === "") {
-        num1 = 0;
+        num2 = 0;
     };
     num1 = Number(num1);
     num2 = Number(num2);
@@ -24,7 +18,7 @@ function subtractFunction(num1, num2) {
         num1 = 0;
     };
     if(num2 === "") {
-        num1 = 0;
+        num2 = 0;
     };
     num1 = Number(num1);
     num2 = Number(num2);
@@ -36,7 +30,7 @@ function multiplyFunction(num1, num2) {
         num1 = 1;
     };
     if(num2 === "") {
-        num1 = 1;
+        num2 = 1;
     };
     num1 = Number(num1);
     num2 = Number(num2);
@@ -48,7 +42,7 @@ function divideFunction(num1, num2) {
         num1 = 1;
     };
     if(num2 === "") {
-        num1 = 1;
+        num2 = 1;
     };
     num1 = Number(num1);
     num2 = Number(num2);
@@ -74,6 +68,13 @@ function equalsButtonClick() {
     num2 = currentValueElement.textContent;
     previousValueElement.textContent = "";
     currentValueElement.textContent = mathFunctions[func](num1, num2);
+};
+
+const mathFunctions = {
+    "+": addFunction,
+    "-": subtractFunction,
+    "*": multiplyFunction,
+    "/": divideFunction,
 };
 
 const numberButtonArray = Array.from(document.querySelectorAll(".number-button"));
