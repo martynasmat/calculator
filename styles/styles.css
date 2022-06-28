@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'screen-digital';
+    src: url('../fonts/digital-7.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'buttons';
+    src: url('../fonts/OpenSans-Font.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+    background-color: #F0EBE3;
+}
+
+.calculator-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 5px solid #2c383a;
+    border-radius: 25px;
+    width: 600px;
+    height: 750px;
+    margin-top: 50px;
+    background-color: #576F72;
+    min-width: 250px;
+}
+
+.screen-wrapper {
+    flex: 1 1 0;
+    width: 90%;
+    margin-top: 5%;
+    background-color: #7D9D9C;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 230px;
+}
+
+p {
+    font-family: 'screen-digital', sans-serif;
+    color: rgb(51, 51, 51);
+}
+
+.previous-value {
+    margin: 5% 0% 0% 10%;
+    font-size: 42px;
+}
+
+.current-value {
+    margin: 0% 0% 10% 10%;
+    font-size: 58px;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 3 1 0;
+    width: 90%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+button {
+    height: 75%;
+    max-width: 120px;
+    max-height: 90px;
+    font-size: 24px;
+    flex: 1 1 0;
+    background-color: #E4DCCF;
+    color: black;
+    font-family: 'buttons', sans-serif;
+    border-radius: 70px;
+    border: none;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: #2e3a3b;
+    color: #E4DCCF;
+    height: 100%;
+}
+
+.clear {
+    height: 75%;
+    max-width: 400px;
+}
