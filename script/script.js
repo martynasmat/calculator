@@ -71,11 +71,12 @@ function equalsButtonClick() {
     func = previousValueElement.textContent.split(' ')[1];
     num2 = currentValueElement.textContent;
     previousValueElement.textContent = "";
-    const result = mathFunctions[func](num1, num2);
+    let result = mathFunctions[func](num1, num2);
+    result = Math.round(result * 10000000000000) / 10000000000000;
     if(String(result).length < 16) {
         currentValueElement.textContent = result;
     }else {
-        currentValueElement.textContent = result.toExponential(result.length - 16);
+        currentValueElement.textContent = result.toExponential(12);
         console.log(currentValueElement.textContent);
     };
 };
