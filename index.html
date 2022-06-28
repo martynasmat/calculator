@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./styles.css">
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
     <title>Calculator</title>
 </head>
 <body>
     <div class="calculator-wrapper">
         <div class="screen-wrapper">
-            <div class="screen"></div>
+            <div class="screen">
+                <p class="previous-value">X</p>
+                <p class="current-value"></p>
+            </div>
         </div>
         <div class="button-wrapper">
             <div class="button-row 1">
                 <button class="button clear">CLEAR</button>
-                <button class="button equals">=</button>
+                <button class="button delete">DEL</button>
             </div>
             <div class="button-row 2">
                 <button class="button seven">7</button>
@@ -27,7 +30,7 @@
                 <button class="button four">4</button>
                 <button class="button five">5</button>
                 <button class="button six">6</button>
-                <button class="button subtract">-</button>
+                <button class="button divide">/</button>
             </div>
             <div class="button-row 4">
                 <button class="button one">1</button>
@@ -38,8 +41,8 @@
             <div class="button-row 5">
                 <button class="button zero">0</button>
                 <button class="button point">.</button>
-                <button class="button squared">x²</button>
-                <button class="button divide">/</button>
+                <button class="button equals">=</button>
+                <button class="button subtract">-</button>
             </div>
         </div>
     </div>
