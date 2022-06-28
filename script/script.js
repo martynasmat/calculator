@@ -50,15 +50,19 @@ function divideFunction(num1, num2) {
 };
 
 function numberButtonClick(arg) {
-    currentValueElement.textContent += arg;
+    if(currentValueElement.textContent.length < 16){
+        currentValueElement.textContent += arg;
+    };
 };
 
 function functionButtonClick(arg) {
-    if(previousValueElement.textContent === "") {
-        previousValueElement.textContent = `${currentValueElement.textContent} ${arg}`;
-        currentValueElement.textContent = "";
-    }else {
-        previousValueElement.textContent = `${previousValueElement.textContent.split(' ')[0]} ${arg}`;
+    if(previousValueElement.textContent !== "" || currentValueElement.textContent !== "") {
+        if(previousValueElement.textContent === "") {
+            previousValueElement.textContent = `${currentValueElement.textContent} ${arg}`;
+            currentValueElement.textContent = "";
+        }else {
+            previousValueElement.textContent = `${previousValueElement.textContent.split(' ')[0]} ${arg}`;
+        };
     };
 };
 
@@ -67,7 +71,13 @@ function equalsButtonClick() {
     func = previousValueElement.textContent.split(' ')[1];
     num2 = currentValueElement.textContent;
     previousValueElement.textContent = "";
-    currentValueElement.textContent = mathFunctions[func](num1, num2);
+    const result = mathFunctions[func](num1, num2);
+    if(String(result).length < 16) {
+        currentValueElement.textContent = result;
+    }else {
+        currentValueElement.textContent = result.toExponential(result.length - 16);
+        console.log(currentValueElement.textContent);
+    };
 };
 
 const mathFunctions = {
