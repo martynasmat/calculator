@@ -25,11 +25,17 @@ body {
     align-items: center;
     border: 5px solid #2c383a;
     border-radius: 25px;
-    width: 600px;
-    height: 750px;
+    width: 570px;
+    height: 720px;
     margin-top: 50px;
     background-color: #576F72;
     min-width: 250px;
+    transition: 0.2s;
+}
+
+.calculator-wrapper:hover {
+    width: 600px;
+    height: 750px;
 }
 
 .screen-wrapper {
@@ -37,7 +43,7 @@ body {
     width: 90%;
     margin-top: 5%;
     background-color: #7D9D9C;
-    border: 2px solid black;
+    border: 4px solid #2c383a;
     border-radius: 15px;
 }
 
@@ -80,16 +86,16 @@ p {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    gap: 5%;
 }
 
 button {
     height: 75%;
-    max-width: 120px;
     max-height: 90px;
     font-size: 24px;
     flex: 1 1 0;
     background-color: #E4DCCF;
-    color: black;
+    color: #2c383a;
     font-family: 'buttons', sans-serif;
     border-radius: 70px;
     border: none;
@@ -100,9 +106,4 @@ button:hover {
     background-color: #2e3a3b;
     color: #E4DCCF;
     height: 100%;
-}
-
-.clear {
-    height: 75%;
-    max-width: 400px;
 }
