@@ -25,17 +25,12 @@ body {
     align-items: center;
     border: 5px solid #2c383a;
     border-radius: 25px;
-    width: 570px;
-    height: 720px;
+    width: 590px;
+    height: 750px;
     margin-top: 50px;
     background-color: #576F72;
     min-width: 250px;
     transition: 0.2s;
-}
-
-.calculator-wrapper:hover {
-    width: 600px;
-    height: 750px;
 }
 
 .screen-wrapper {
@@ -106,4 +101,8 @@ button:hover {
     background-color: #2e3a3b;
     color: #E4DCCF;
     height: 100%;
+}
+
+.clear:hover, .delete:hover {
+    flex: 2 1 0;
 }
